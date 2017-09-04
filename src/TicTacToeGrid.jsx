@@ -22,7 +22,7 @@ class TicTacToeGrid extends Component {
 	}
 
 	onCellClick(clickedCellId) {
-		if (this.state.matchingTriplet.length) {
+		if (this.state.matchingTriplet.length || this.state.gridState.size === 9) {
 			this._reset();
 			return;
 		}
