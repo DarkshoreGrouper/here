@@ -13,6 +13,7 @@
   font-family: 'Open Sans', sans-serif; }
   .tic-tac-toe__header {
     font-size: 35px;
+    line-height: 35px;
     margin-bottom: 30px;
     color: #4DB6AC; }
   .tic-tac-toe__grid {
