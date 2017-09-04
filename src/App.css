@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.tic-tac-toe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E0F2F1;
+  font-family: 'Open Sans', sans-serif; }
+  .tic-tac-toe__header {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #4DB6AC; }
+  .tic-tac-toe__grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 5px;
+    background-color: #26A69A; }
+  .tic-tac-toe__grid-row {
+    display: flex; }
+  .tic-tac-toe__cell {
+    cursor: pointer;
+    line-height: 100px;
+    text-align: center;
+    font-size: 60px;
+    background-color: #E0F2F1;
+    color: #00695C; }
+    .tic-tac-toe__cell--winner {
+      color: #4CAF50; }

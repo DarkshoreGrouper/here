@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import './vars.scss';
+
+.tic-tac-toe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $bg-color;
+	font-family: 'Open Sans', sans-serif;
+
+	&__header {
+		font-size: 35px;
+		margin-bottom: 30px;
+		color: $header-color;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: $cell-size $cell-size $cell-size;
+		grid-template-rows: $cell-size $cell-size $cell-size;
+		grid-gap: 5px;
+		background-color: $grid-border-color;
+	}
+
+	&__grid-row {
+		display: flex;
+	}
+
+	&__cell {
+		cursor: pointer;
+		line-height: $cell-size;
+		text-align: center;
+		font-size: 60px;
+		background-color: $bg-color;
+		color: $player-color;
+
+		&--winner {
+			color: $win-color;
+		}
+	}
+}
