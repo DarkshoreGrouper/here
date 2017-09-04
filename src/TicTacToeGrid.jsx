@@ -26,18 +26,20 @@ class TicTacToeGrid extends Component {
 			this._reset();
 			return;
 		}
-		this.state.gridState.set(clickedCellId, this.props.currentPlayer);
-		const matchingTriplet = this._checkWin(clickedCellId);
-		if (matchingTriplet.length) {
-			this.setState({
-				matchingTriplet
-			}, this.props.onGameEnd);
-			return;
-		} else if (this.state.gridState.size === 9) {
-			this.props.onGameEnd(false);
-			return;
+		if (!this.state.gridState.get(clickedCellId)) {
+			this.state.gridState.set(clickedCellId, this.props.currentPlayer);
+			const matchingTriplet = this._checkWin(clickedCellId);
+			if (matchingTriplet.length) {
+				this.setState({
+					matchingTriplet
+				}, this.props.onGameEnd);
+				return;
+			} else if (this.state.gridState.size === 9) {
+				this.props.onGameEnd(false);
+				return;
+			}
+			this.props.changePlayer();
 		}
-		this.props.changePlayer();
 	}
 
 	_reset() {
